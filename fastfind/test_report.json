@@ -1,0 +1,95 @@
+{
+  "project": "fastfind",
+  "test_start": "2026-02-07T11:35:40.413956",
+  "environment": {
+    "system": "Windows",
+    "release": "11",
+    "python_version": "3.13.11",
+    "fastfind_version": "0.1.0",
+    "working_directory": "C:\\Users\\18937\\Desktop\\开源\\fastfind",
+    "cpu_count": 32,
+    "python_executable": "C:\\Users\\18937\\Desktop\\开源\\fastfind\\.venv_test\\Scripts\\python.exe"
+  },
+  "results": {
+    "unit_tests": {
+      "测试基本导入": {
+        "status": "PASSED",
+        "passed": 0,
+        "failed": 0,
+        "duration": "0.53s",
+        "output": "                 [ 16%]\ntests/unit/test_basic.py::test_import_scanner PASSED                     [ 33%]\ntests/unit/test_basic.py::test_import_filters PASSED                     [ 50%]\ntests/unit/test_basic.py::test_import_cache PASSED                       [ 66%]\ntests/unit/test_basic.py::test_import_utils SKIPPED (utils模块未找到)    [ 83%]\ntests/unit/test_basic.py::test_import_cli PASSED                         [100%]\n\n======================== 5 passed, 1 skipped in 0.06s =========================\n"
+      }
+    },
+    "integration_tests": {
+      "测试CLI命令": {
+        "status": "PASSED",
+        "duration": "0.57s",
+        "output": "t_cli_basic.py::test_stats_command PASSED           [ 71%]\ntests/integration/test_cli_basic.py::test_version_command PASSED         [ 85%]\ntests/integration/test_cli_basic.py::test_help_command PASSED            [100%]\n\n============================== 7 passed in 0.11s ==============================\n"
+      },
+      "测试性能": {
+        "status": "FAILED",
+        "returncode": 2,
+        "duration": "0.65s",
+        "error": "tion byte\n=========================== short test summary info ===========================\nERROR tests/integration/test_performance_basic.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n============================== 1 error in 0.18s ===============================\n"
+      }
+    },
+    "cli_functional": {
+      "find_basic": {
+        "status": "PASSED"
+      },
+      "info_file": {
+        "status": "PASSED"
+      },
+      "stats": {
+        "status": "PASSED"
+      },
+      "version": {
+        "status": "PASSED"
+      }
+    },
+    "code_quality": {
+      "代码格式化检查 (black)": {
+        "status": "FAILED",
+        "returncode": 123,
+        "duration": "9.00s",
+        "error": "would reformat C:\\Users\\18937\\Desktop\\开源\\fastfind\\src\\fastfind\\__init__.py\nwould reformat C:\\Users\\18937\\Desktop\\开源\\fastfind\\tests\\conftest.py\nerror: cannot format C:\\Users\\18937\\Desktop\\开源\\fastfind\\t"
+      },
+      "代码风格检查 (flake8)": {
+        "status": "FAILED",
+        "returncode": 1,
+        "duration": "1.73s",
+        "error": "src/fastfind\\cache.py:11:1: F401 'typing.Union' imported but unused\nsrc/fastfind\\cache.py:11:1: F401 'typing.Set' imported but unused\nsrc/fastfind\\cache.py:14:1: F401 'datetime.timedelta' imported but"
+      },
+      "类型检查 (mypy)": {
+        "status": "FAILED",
+        "returncode": 1,
+        "duration": "2.20s",
+        "error": "src\\fastfind\\formatters.py:170: error: Need type annotation for \"fieldnames\" (hint: \"fieldnames: set[<type>] = ...\")  [var-annotated]\nsrc\\fastfind\\formatters.py:173: error: Incompatible types in assig"
+      },
+      "安全检查 (bandit)": {
+        "status": "FAILED",
+        "returncode": 1,
+        "duration": "0.36s",
+        "error": "[main]\tINFO\tprofile include tests: None\n[main]\tINFO\tprofile exclude tests: None\n[main]\tINFO\tcli include tests: None\n[main]\tINFO\tcli exclude tests: None\n[main]\tINFO\trunning on Python 3.13.11\nRun starte"
+      }
+    },
+    "coverage": {
+      "status": "FAILED",
+      "coverage_percentage": 0.0,
+      "duration": "0.95s",
+      "returncode": 2,
+      "output": "estPlanGenerator' because it has a __init__ constructor (from: test_plan.py)\n    class TestPlanGenerator:\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ===========================\nERROR tests/integration/test_performance_basic.py\nERROR tests/unit/test_basic.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!\n======================== 1 warning, 2 errors in 0.32s =========================\n"
+    }
+  },
+  "summary": {
+    "total_tests": 10,
+    "passed_tests": 5,
+    "failed_tests": 5,
+    "pass_rate": "50.0%",
+    "code_coverage": "0.0%",
+    "quality_checks_passed": 0,
+    "quality_checks_failed": 4,
+    "test_duration": "46.3s"
+  },
+  "test_end": "2026-02-07T11:36:26.685505"
+}
